@@ -1,0 +1,209 @@
+{
+  "name": "☆ 𝓘𝓷𝓪𝓢𝓲𝓵𝓳𝓪 ☆",
+  "bio": "hey ich bin InaSilja dein Sternchen ツ",
+  "siteCredit": "© 2025 InaSilja ❦",
+  "font": {
+    "url": "https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400&display=swap",
+    "name": "Comic Neue"
+  },
+  "favicon": {
+    "relative": "/assets/favicon_inasilja.png",
+    "fallback": "https://raw.githubusercontent.com/InaSilja/inasilja.me/main/assets/favicon_inasilja.png",
+    "type": "image/png"
+  },
+  "profileImage": {
+    "relative": "/assets/profile_inasilja.webp",
+    "fallback": "https://raw.githubusercontent.com/InaSilja/inasilja.me/main/assets/profile_inasilja.webp",
+    "alt": "Ina Silja"
+  },
+  "primarySocials": [
+    {
+      "url": "https://www.instagram.com/inasiljaneva/",
+      "icon": {
+        "relative": "/assets/icons/instagram_logo.svg",
+        "fallback": "https://raw.githubusercontent.com/InaSilja/inasilja.me/main/assets/icons/instagram_logo.svg"
+      },
+      "alt": "Instagram",
+      "class": "insta-icon"
+    },
+    {
+      "url": "https://x.com/inasilja",
+      "icon": {
+        "relative": "/assets/icons/x_logo.svg",
+        "fallback": "https://raw.githubusercontent.com/InaSilja/inasilja.me/main/assets/icons/x_logo.svg"
+      },
+      "alt": "X",
+      "class": "x-icon"
+    },
+    {
+      "url": "https://www.snapchat.com/@inasiljastella",
+      "icon": {
+        "relative": "/assets/icons/snapchat_logo.svg",
+        "fallback": "https://raw.githubusercontent.com/InaSilja/inasilja.me/main/assets/icons/snapchat_logo.svg"
+      },
+      "alt": "Snapchat",
+      "class": "snapchat-icon"
+    },
+    {
+      "url": "https://t.me/inasilja",
+      "icon": {
+        "relative": "/assets/icons/telegram_logo.svg",
+        "fallback": "https://raw.githubusercontent.com/InaSilja/inasilja.me/main/assets/icons/telegram_logo.svg"
+      },
+      "alt": "Telegram",
+      "class": "telegram-icon"
+    },
+    {
+      "url": "https://www.whatsapp.com/channel/0029Va8dzce4dTnAUHtals3g",
+      "icon": {
+        "relative": "/assets/icons/whatsapp_logo.svg",
+        "fallback": "https://raw.githubusercontent.com/InaSilja/inasilja.me/main/assets/icons/whatsapp_logo.svg"
+      },
+      "alt": "WhatsApp",
+      "class": "whatsapp-icon"
+    }
+  ],
+  "linkButtons": [
+    {
+      "url": "https://onlyfans.com/inasilja",
+      "icon": {
+        "relative": "/assets/icons/onlyfans_logo.svg",
+        "fallback": "https://raw.githubusercontent.com/InaSilja/inasilja.me/main/assets/icons/onlyfans_logo.svg"
+      },
+      "alt": "OnlyFans",
+      "class": "onlyfans-icon",
+      "label": "OnlyFans @inasilja",
+      "extraClass": "onlyfans"
+    },
+    {
+      "url": "https://www.instagram.com/inasiljaneva/",
+      "icon": {
+        "relative": "/assets/icons/instagram_logo.svg",
+        "fallback": "https://raw.githubusercontent.com/InaSilja/inasilja.me/main/assets/icons/instagram_logo.svg"
+      },
+      "alt": "Instagram",
+      "class": "insta-icon",
+      "label": "Instagram"
+    },
+    {
+      "url": "https://www.snapchat.com/@inasiljastella",
+      "icon": {
+        "relative": "/assets/icons/snapchat_logo.svg",
+        "fallback": "https://raw.githubusercontent.com/InaSilja/inasilja.me/main/assets/icons/snapchat_logo.svg"
+      },
+      "alt": "Snapchat",
+      "class": "snapchat-icon",
+      "label": "Snapchat"
+    },
+    {
+      "url": "https://x.com/inasilja",
+      "icon": {
+        "relative": "/assets/icons/x_logo.svg",
+        "fallback": "https://raw.githubusercontent.com/InaSilja/inasilja.me/main/assets/icons/x_logo.svg"
+      },
+      "alt": "X",
+      "class": "x-icon",
+      "label": "X"
+    },
+    {
+      "url": "https://t.me/inasilja",
+      "icon": {
+        "relative": "/assets/icons/telegram_logo.svg",
+        "fallback": "https://raw.githubusercontent.com/InaSilja/inasilja.me/main/assets/icons/telegram_logo.svg"
+      },
+      "alt": "Telegram",
+      "class": "telegram-icon",
+      "label": "Telegram"
+    },
+    {
+      "url": "https://www.youtube.com/@inasiljastella",
+      "icon": {
+        "relative": "/assets/icons/youtube_logo.svg",
+        "fallback": "https://raw.githubusercontent.com/InaSilja/inasilja.me/main/assets/icons/youtube_logo.svg"
+      },
+      "alt": "YouTube",
+      "class": "youtube-icon",
+      "label": "YouTube"
+    },
+    {
+      "url": "https://www.tiktok.com/@inasiljastella",
+      "icon": {
+        "relative": "/assets/icons/tiktok_logo.svg",
+        "fallback": "https://raw.githubusercontent.com/InaSilja/inasilja.me/main/assets/icons/tiktok_logo.svg"
+      },
+      "alt": "TikTok",
+      "class": "tiktok-icon",
+      "label": "TikTok"
+    },
+    {
+      "url": "https://www.facebook.com/inasilja/",
+      "icon": {
+        "relative": "/assets/icons/facebook_logo.svg",
+        "fallback": "https://raw.githubusercontent.com/InaSilja/inasilja.me/main/assets/icons/facebook_logo.svg"
+      },
+      "alt": "Facebook",
+      "class": "facebook-icon",
+      "label": "Facebook"
+    },
+    {
+      "url": "https://www.whatsapp.com/channel/0029Va8dzce4dTnAUHtals3g",
+      "icon": {
+        "relative": "/assets/icons/whatsapp_logo.svg",
+        "fallback": "https://raw.githubusercontent.com/InaSilja/inasilja.me/main/assets/icons/whatsapp_logo.svg"
+      },
+      "alt": "WhatsApp",
+      "class": "whatsapp-icon",
+      "label": "WhatsApp Channel"
+    },
+    {
+      "url": "https://www.deviantart.com/inasilja",
+      "icon": {
+        "relative": "/assets/icons/deviantart_logo.svg",
+        "fallback": "https://raw.githubusercontent.com/InaSilja/inasilja.me/main/assets/icons/deviantart_logo.svg"
+      },
+      "alt": "DeviantArt",
+      "class": "deviantart-icon",
+      "label": "DeviantArt"
+    },
+    {
+      "url": "https://github.com/InaSilja",
+      "icon": {
+        "relative": "/assets/icons/github_logo.svg",
+        "fallback": "https://raw.githubusercontent.com/InaSilja/inasilja.me/main/assets/icons/github_logo.svg"
+      },
+      "alt": "GitHub",
+      "class": "github-icon",
+      "label": "GitHub"
+    },
+    {
+      "url": "https://de.pinterest.com/bunnycillaxd4q/",
+      "icon": {
+        "relative": "/assets/icons/pinterest_logo.svg",
+        "fallback": "https://raw.githubusercontent.com/InaSilja/inasilja.me/main/assets/icons/pinterest_logo.svg"
+      },
+      "alt": "Pinterest",
+      "class": "pinterest-icon",
+      "label": "Pinterest"
+    },
+    {
+      "url": "https://www.reddit.com/user/inasilja/",
+      "icon": {
+        "relative": "/assets/icons/reddit_logo.svg",
+        "fallback": "https://raw.githubusercontent.com/InaSilja/inasilja.me/main/assets/icons/reddit_logo.svg"
+      },
+      "alt": "Reddit",
+      "class": "reddit-icon",
+      "label": "Reddit"
+    },
+    {
+      "url": "https://www.paypal.com/paypalme/InaSilja",
+      "icon": {
+        "relative": "/assets/icons/paypal_logo.svg",
+        "fallback": "https://raw.githubusercontent.com/InaSilja/inasilja.me/main/assets/icons/paypal_logo.svg"
+      },
+      "alt": "PayPal",
+      "class": "paypal-icon",
+      "label": "PayPalMe"
+    }
+  ]
+}
