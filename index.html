@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -16,11 +15,6 @@
             background-size: 200% 200%;
             animation: gradientShift 10s ease infinite;
             scroll-behavior: smooth;
-        }
-        @keyframes gradientShift {
-            //0% { background-position: 0% 50%; }
-            //50% { background-position: 100% 50%; }
-            //100% { background-position: 0% 50%; }
         }
         .container {
             background: transparent;
@@ -77,6 +71,9 @@
             justify-content: center;
             gap: 20px;
             margin-bottom: 20px;
+        }
+        .primary-socials a {
+            position: relative;
         }
         .primary-socials img {
             width: 40px;
@@ -203,6 +200,26 @@
             z-index: 0;
             background: transparent;
         }
+        .new-badge {
+            position: absolute;
+            top: -10px;
+            right: 10px;
+            display: inline-block;
+            width: auto; /* Ensure width fits content */
+            background: rgba(0, 255, 255, 0.8); /* Cyan-ish to match theme */
+            color: #ff00aa; /* Pink text */
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 0.8em;
+            box-shadow: 0 0 10px #00ffff;
+            animation: glowPulse 2s ease-in-out infinite;
+            text-shadow: 0 0 5px #ff00aa;
+        }
+        .link-button .new-badge {
+            width: auto; /* Reinforce content-based width */
+            min-width: unset; /* Prevent any minimum width */
+            padding: 2px 8px; /* Consistent padding */
+        }
     </style>
 </head>
 <body>
@@ -314,6 +331,12 @@
                     img.alt = social.alt;
                     img.className = social.class;
                     link.appendChild(img);
+                    if (social.isNew) {
+                        const newSpan = document.createElement('span');
+                        newSpan.className = 'new-badge';
+                        newSpan.textContent = 'New';
+                        link.appendChild(newSpan);
+                    }
                     primarySocialsContainer.appendChild(link);
                 }
 
@@ -333,6 +356,12 @@
                     span.textContent = button.label;
                     link.appendChild(img);
                     link.appendChild(span);
+                    if (button.isNew) {
+                        const newSpan = document.createElement('span');
+                        newSpan.className = 'new-badge';
+                        newSpan.textContent = 'New';
+                        link.appendChild(newSpan);
+                    }
                     // Insert before site-credit
                     header.insertBefore(link, siteCreditElement);
                 }
