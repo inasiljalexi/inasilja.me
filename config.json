@@ -1,7 +1,7 @@
 {
   "name": "☆ 𝓘𝓷𝓪𝓢𝓲𝓵𝓳𝓪 ☆",
   "bio": "hey ich bin InaSilja dein Sternchen ツ",
-  "siteCredit": "© 2025 InaSilja ❦",
+  "siteCredit": "© 2025 InaSilja",
   "font": {
     "url": "https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400&display=swap",
     "name": "Comic Neue"
@@ -38,6 +38,16 @@
       "isNew": false
     },
     {
+      "url": "https://www.tiktok.com/@inasiljastella",
+      "icon": {
+        "relative": "/assets/icons/tiktok_logo.svg",
+        "fallback": "https://raw.githubusercontent.com/inasiljalexi/inasilja.me/main/assets/icons/tiktok_logo.svg"
+      },
+      "alt": "TikTok",
+      "class": "tiktok-icon",
+      "isNew": false
+    },
+    {
       "url": "https://www.snapchat.com/@inasiljastella",
       "icon": {
         "relative": "/assets/icons/snapchat_logo.svg",
@@ -45,16 +55,6 @@
       },
       "alt": "Snapchat",
       "class": "snapchat-icon",
-      "isNew": false
-    },
-    {
-      "url": "https://t.me/inasilja",
-      "icon": {
-        "relative": "/assets/icons/telegram_logo.svg",
-        "fallback": "https://raw.githubusercontent.com/inasiljalexi/inasilja.me/main/assets/icons/telegram_logo.svg"
-      },
-      "alt": "Telegram",
-      "class": "telegram-icon",
       "isNew": false
     },
     {
@@ -115,17 +115,6 @@
       "isNew": false
     },
     {
-      "url": "https://t.me/inasilja",
-      "icon": {
-        "relative": "/assets/icons/telegram_logo.svg",
-        "fallback": "https://raw.githubusercontent.com/inasiljalexi/inasilja.me/main/assets/icons/telegram_logo.svg"
-      },
-      "alt": "Telegram",
-      "class": "telegram-icon",
-      "label": "Telegram",
-      "isNew": false
-    },
-    {
       "url": "https://www.youtube.com/@inasiljastella",
       "icon": {
         "relative": "/assets/icons/youtube_logo.svg",
@@ -167,6 +156,17 @@
       "alt": "WhatsApp",
       "class": "whatsapp-icon",
       "label": "WhatsApp Channel",
+      "isNew": false
+    },
+    {
+      "url": "https://t.me/inasiljastella",
+      "icon": {
+        "relative": "/assets/icons/telegram_logo.svg",
+        "fallback": "https://raw.githubusercontent.com/inasiljalexi/inasilja.me/main/assets/icons/telegram_logo.svg"
+      },
+      "alt": "Telegram",
+      "class": "telegram-icon",
+      "label": "Telegram",
       "isNew": false
     },
     {
