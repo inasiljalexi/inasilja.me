@@ -125,7 +125,6 @@ h1, h2, h3, h4, h5 {
 h1 {
     font-size: 2.8em;
     line-height: 1.1;
-    white-space: nowrap; /* Magic line to keep text on one line */
     color: var(--text-color);
     text-shadow: var(--primary-glow);
 }
@@ -663,7 +662,6 @@ img[data-optimized="false"] {
     display: block;
     color: var(--note-color);
     text-shadow: var(--note-glow);
-    white-space: nowrap; /* Magic line to keep text on one line */
 }
 
 /* Support - Section */
