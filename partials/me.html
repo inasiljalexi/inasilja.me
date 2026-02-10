@@ -1,0 +1,113 @@
+<!-- partials/me.html -->
+ <h3>Me – Mehr über mich</h3>
+
+<div class="img-container">
+    <!-- Image (z-index 1 for stars to overlay if desired) -->
+    <img src="v1770596864/me_inasilja_playful_car_selfie.heic" 
+         alt="Ina Silja Bietsch in einem Auto-Selfie – blondes Haar, blaue Augen, blaues Top und pinker Rock, mit verspieltem Lächeln" 
+         class="interactive-img"
+         loading="lazy">
+    
+    <!-- Stars Layer - Behind everything else -->
+    <div class="star-layer">
+        <span class="stellar-star star1">★</span>
+        <span class="stellar-star star2">★</span>
+        <span class="stellar-star star3">☆</span>
+        <span class="stellar-star star4">★</span>
+        <span class="stellar-star star5">✨</span>
+        <span class="stellar-star star6">☆</span>
+        <span class="stellar-star star7">★</span>
+        <span class="stellar-star star8">✨</span>
+        <span class="stellar-star star9">☆</span>
+        <span class="stellar-star star10">★</span>
+        <span class="stellar-star star11">✨</span>
+        <span class="stellar-star star12">☆</span>
+    </div>
+
+    <!-- Text Layer - Always on top, fully visible -->
+    <div class="text-layer">
+
+        <p>Ich bin Ina Silja Bietsch, jaa das ist mein echter vollständiger Name.  
+        Ich werde von allen eigentlich einfach nur Ina genannt, habe aber noch den Zweitnamen Silja.</p>
+
+        <p>Ich bin Cross-Media-Designerin, Gamerin, Künstlerin, Autorin & Model.  
+        Ich bin gebürtige Deutsche und kommuniziere in den Sprachen Englisch & Deutsch.</p>
+
+        <p>Ich liebe alles was glitzert, funkelt und leuchtet, deswegen sind die Sternchen auch mein Markenzeichen hihi.  
+        Ich bin das Mädel das aussieht wie eine echt gewordene Anime Elbe, also lass dich von mir verzaubern!</p>
+
+        <blockquote>
+            ⁓ Lausche dem sanften Singen deines Herzens und vergiss niemals dem Klang dieser Melodie zu folgen,  
+            denn nur so wirst du jemals glücklich werden!
+        </blockquote>
+
+        <p class="signature">
+            • Creative Mind & Social Voice – Simply Sternchen •
+        </p>
+    </div>
+</div>
+
+<style>
+/* Layers for Control (unchanged) */
+.star-layer {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.interactive-img {
+    position: relative;
+    z-index: 0;  /* Image above stars, below text if overlap */
+}
+
+.text-layer {
+    position: relative;
+    z-index: 2;  /* Text always on top */
+    pointer-events: none;  /* Events pass through */
+}
+
+/* Bright Glowing Stars */
+.stellar-star {
+    position: absolute;
+    color: #ffffff;
+    font-size: 2.2em;
+    text-shadow: 
+        0 0 8px #fff,
+        0 0 16px #fff,
+        0 0 25px var(--highlight-color),
+        0 0 35px var(--primary-color),
+        0 0 45px var(--secondary-color);
+    animation: cyberTwinkle 10s ease-in-out infinite, floatStar 7s ease-in-out infinite, rotateSlow 30s linear infinite;
+    z-index: 1;
+    opacity: 0.25;  /* Slightly reduced to avoid any visual block */
+    transform: scale(1);  /* Initial scale */
+    will-change: transform, opacity, color;  /* GPU acceleration for smooth load */
+}
+
+/* Balanced Star Positions – Slightly more spread: Mix top/mid/bottom, minor tweaks */
+.star1 { top: 8%; left: 4%; font-size: 2.5em; animation-delay: 0s, 1.2s, 0s; animation-duration: 5s, 8s, 10s; animation-direction: normal, normal, normal; }
+.star2 { top: 20%; right: 12%; font-size: 1.8em; animation-delay: 0.8s, 0.5s, 1.5s; animation-duration: 3.5s, 6s, 14s; animation-direction: normal, normal, reverse; }
+.star3 { top: 85%; left: 5%; font-size: 2em; animation-delay: 1.6s, 2.1s, 0.3s; animation-duration: 4.5s, 9s, 11s; animation-direction: normal, normal, normal; }
+.star4 { top: 75%; right: 10%; font-size: 2.2em; animation-delay: 2.4s, 0.9s, 2.7s; animation-duration: 6s, 5.5s, 13s; animation-direction: normal, normal, reverse; }
+.star5 { top: 45%; left: 10%; font-size: 1.5em; animation-delay: 0.4s, 1.8s, 1s; animation-duration: 3s, 7.5s, 9s; animation-direction: normal, normal, normal; }
+.star6 { top: 55%; right: 18%; font-size: 3em; animation-delay: 1.2s, 0.2s, 2.2s; animation-duration: 5.5s, 6.5s, 15s; animation-direction: normal, normal, reverse; }
+.star7 { bottom: 40%; left: 25%; font-size: 1.7em; animation-delay: 2s, 2.5s, 0.7s; animation-duration: 4s, 8.5s, 12s; animation-direction: normal, normal, normal; }
+.star8 { bottom: 10%; right: 20%; font-size: 2.1em; animation-delay: 2.8s, 1.4s, 1.9s; animation-duration: 6.5s, 5s, 10.5s; animation-direction: normal, normal, reverse; }
+.star9 { top: 2%; left: 90%; font-size: 2.8em; animation-delay: 0.2s, 0.6s, 2.4s; animation-duration: 3.8s, 9.5s, 14.5s; animation-direction: normal, normal, normal; }
+.star10 { top: 35%; right: 15%; font-size: 1.6em; animation-delay: 1s, 2.3s, 0.4s; animation-duration: 4.8s, 7s, 11.5s; animation-direction: normal, normal, reverse; }
+.star11 { top: 15%; left: 45%; font-size: 2.3em; animation-delay: 1.8s, 1s, 1.3s; animation-duration: 5.2s, 6s, 13.5s; animation-direction: normal, normal, normal; }
+.star12 { top: 0%; right: 30%; font-size: 1.7em; animation-delay: 2.6s, 1.7s, 2.8s; animation-duration: 4.2s, 8s, 12.5s; animation-direction: normal, normal, reverse; }
+
+/* Keyframes (unchanged) */
+@keyframes cyberTwinkle {
+    0%, 100% { opacity: 0.25; transform: scale(1); color: #fff; }
+    50%      { opacity: 0.75; transform: scale(1.4); color: var(--highlight-color); }
+}
+
+@keyframes rotateSlow {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+</style>

@@ -1,0 +1,262 @@
+{
+  "title": "☆ 𝓘𝓷𝓪𝓢𝓲𝓵𝓳𝓪 ☆ – Dein funkelndes Sternchen",
+  "meta": {
+    "description": "Ina Silja Bietsch – Cross-Media-Designerin, Gamerin, Künstlerin, Autorin & Model aus Köln. Entdecke meine funkelnde Welt mit digitaler Kunst, Musik, Gaming, Kochen und mehr!",
+    "keywords": "Ina Silja Bietsch, InaSilja, InaSiljaStella, Cilexiella, Cross Media Designerin Köln, Gamerin, Anime Elbe, Digitale Kunst, 3D Design, Musikproduktion, Kochen Backen, OnlyFans Model, Social Media wie X (Twitter), Instagram, TikTok, SnapChat, Telegram",
+    "author": "Ina Silja Bietsch",
+    "robots": "index, follow"
+  },
+  "openGraph": {
+    "title": "☆ 𝓘𝓷𝓪𝓢𝓲𝓵𝓳𝓪 ☆ – Dein funkelndes Sternchen",
+    "description": "Blondes Anime-Engelchen aus Köln: Kreativ in Design, Gaming, Kunst und mehr. Folge mir für Glitzer, Magie und exklusiven Content!",
+    "image": "https://res.cloudinary.com/dekqpnsvv/image/upload/f_auto,q_auto,w_auto,dpr_auto/v1770596168/profile_inasilja.heic",
+    "url": "https://www.inasilja.me",
+    "type": "website"
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "site": "@Cilexiella",
+    "title": "Ina Silja Bietsch @Cilexiella – Cross-Media-Designerin & Model",
+    "description": "Entdecke meine verzauberte Welt: Design, Gaming, Kunst, Live Updates, Cyberspacing und sehr vieles mehr aus Köln!",
+    "image": "https://res.cloudinary.com/dekqpnsvv/image/upload/f_auto,q_auto,w_auto,dpr_auto/v1770596168/profile_inasilja.heic"
+  },
+  "favicon": {
+    "relative": "/assets/images/favicon_inasilja.png",
+    "fallback": "https://www.inasilja.me/assets/images/favicon_inasilja.png",
+    "type": "image/png"
+  },
+  "profileImage": {
+    "relative": "https://res.cloudinary.com/dekqpnsvv/image/upload/f_auto,q_auto,w_auto,dpr_auto/v1770596168/profile_inasilja.heic",
+    "fallback": "https://www.inasilja.me/assets/images/profile_inasilja.webp",
+    "alt": "Ina Silja Bietsch – Cross-Media-Designerin, Gamerin, Künstlerin und Model aus Köln mit blonden Haaren, blauen Augen und heller Haut"
+  },
+  "name": "☆ 𝓘𝓷𝓪𝓢𝓲𝓵𝓳𝓪 ☆",
+  "bio": "hey ich bin InaSilja dein funkelndes Sternchen ツ\nDas hier ist meine schillernde Website, freut mich meeega dass du jetzt da bist. Also los, lass uns zusammen spielerisch durch meine Welt swipen!",
+  "siteCredit": "© 2026 InaSilja ❦",
+  "font": {
+    "name": "Comic Neue",
+    "family": "Comic Neue",
+    "cssPath": "/css/fonts.css"
+  },
+  "primarySocials": [
+    {
+      "url": "https://onlyfans.com/inasilja",
+      "icon": {
+        "relative": "/assets/icons/onlyfans_logo.svg",
+        "fallback": "https://www.inasilja.me/assets/icons/onlyfans_logo.svg"
+      },
+      "alt": "OnlyFans von Ina Silja – Exklusiver Content für Fans mit Gaming, Kunst und mehr",
+      "class": "onlyfans-icon primary-socials-icon"
+    },
+    {
+      "url": "https://x.com/Cilexiella",
+      "icon": {
+        "relative": "/assets/icons/x_logo.svg",
+        "fallback": "https://www.inasilja.me/assets/icons/x_logo.svg"
+      },
+      "alt": "X (Twitter) Profil von Ina Silja Bietsch @Cilexiella – Updates, Selfies, Videos, Cyberspacing",
+      "class": "x-icon primary-socials-icon",
+      "badge": "New"
+    },
+    {
+      "url": "https://www.snapchat.com/@inasiljastella",
+      "icon": {
+        "relative": "/assets/icons/snapchat_logo.svg",
+        "fallback": "https://www.inasilja.me/assets/icons/snapchat_logo.svg"
+      },
+      "alt": "Snapchat Profil von Ina Silja Stella – Tägliche Stories und funkelnde Momente",
+      "class": "snapchat-icon primary-socials-icon"
+    },
+    {
+      "url": "https://t.me/inasiljastella",
+      "icon": {
+        "relative": "/assets/icons/telegram_logo.svg",
+        "fallback": "https://www.inasilja.me/assets/icons/telegram_logo.svg"
+      },
+      "alt": "Telegram Kanal von Ina Silja – Exklusive Updates und kreative Kunst",
+      "class": "telegram-icon primary-socials-icon"
+    },
+    {
+      "url": "https://www.whatsapp.com/channel/0029Va8dzce4dTnAUHtals3g",
+      "icon": {
+        "relative": "/assets/icons/whatsapp_logo.svg",
+        "fallback": "https://www.inasilja.me/assets/icons/whatsapp_logo.svg"
+      },
+      "alt": "WhatsApp Kanal von Ina Silja – Direkte Nachrichten und Community-Updates",
+      "class": "whatsapp-icon primary-socials-icon"
+    }
+  ],
+  "linkButtons": [
+    {
+      "url": "https://onlyfans.com/inasilja",
+      "label": "OnlyFans @inasilja",
+      "icon": {
+        "relative": "/assets/icons/onlyfans_logo.svg",
+        "fallback": "https://www.inasilja.me/assets/icons/onlyfans_logo.svg"
+      },
+      "alt": "OnlyFans Profil von Ina Silja – Exklusive Inhalte und persönliche Einblicke",
+      "class": "social-icon",
+      "extraClass": "onlyfans"
+    },
+    {
+      "url": "https://www.snapchat.com/@inasiljastella",
+      "label": "Snapchat @inasiljastella",
+      "icon": {
+        "relative": "/assets/icons/snapchat_logo.svg",
+        "fallback": "https://www.inasilja.me/assets/icons/snapchat_logo.svg"
+      },
+      "alt": "Snapchat von Ina Silja Stella – Tägliche Snaps und funkelnde Momente",
+      "class": "social-icon"
+    },
+    {
+      "url": "https://x.com/Cilexiella",
+      "label": "X @Cilexiella",
+      "icon": {
+        "relative": "/assets/icons/x_logo.svg",
+        "fallback": "https://www.inasilja.me/assets/icons/x_logo.svg"
+      },
+      "alt": "X (Twitter) Profil von Ina Silja Bietsch @Cilexiella – Updates, Selfies, Videos, Cyberspacing",
+      "class": "social-icon",
+      "badge": "New"
+    },
+    {
+      "url": "https://t.me/inasiljastella",
+      "label": "Telegram @inasiljastella",
+      "icon": {
+        "relative": "/assets/icons/telegram_logo.svg",
+        "fallback": "https://www.inasilja.me/assets/icons/telegram_logo.svg"
+      },
+      "alt": "Telegram von Ina Silja – Kanal für Neuigkeiten und Kunst",
+      "class": "social-icon"
+    },
+    {
+      "url": "https://www.whatsapp.com/channel/0029Va8dzce4dTnAUHtals3g",
+      "label": "WhatsApp Channel @inasilja",
+      "icon": {
+        "relative": "/assets/icons/whatsapp_logo.svg",
+        "fallback": "https://www.inasilja.me/assets/icons/whatsapp_logo.svg"
+      },
+      "alt": "WhatsApp Kanal von Ina Silja – Direkte Nachrichten und Community-Updates",
+      "class": "social-icon"
+    },
+    {
+      "url": "https://www.youtube.com/@inasiljastella",
+      "label": "YouTube @inasiljastella",
+      "icon": {
+        "relative": "/assets/icons/youtube_logo.svg",
+        "fallback": "https://www.inasilja.me/assets/icons/youtube_logo.svg"
+      },
+      "alt": "YouTube Kanal von Ina Silja Stella – Videos zu Design, Gaming und Musik",
+      "class": "social-icon"
+    },
+    {
+      "url": "https://www.tiktok.com/@inasiljastella",
+      "label": "TikTok @inasiljastella",
+      "icon": {
+        "relative": "/assets/icons/tiktok_logo.svg",
+        "fallback": "https://www.inasilja.me/assets/icons/tiktok_logo.svg"
+      },
+      "alt": "TikTok von Ina Silja Stella – Kurze kreative Videos und Trends",
+      "class": "social-icon"
+    },
+    {
+      "url": "https://deviantart.com/inasilja",
+      "label": "DeviantArt @inasilja",
+      "icon": {
+        "relative": "/assets/icons/deviantart_logo.svg",
+        "fallback": "https://www.inasilja.me/assets/icons/deviantart_logo.svg"
+      },
+      "alt": "DeviantArt von Ina Silja – Digitale Kunst & schöne Fotos",
+      "class": "social-icon"
+    },
+    {
+      "url": "https://www.reddit.com/user/inasilja/",
+      "label": "Reddit @inasilja",
+      "icon": {
+        "relative": "/assets/icons/reddit_logo.svg",
+        "fallback": "https://www.inasilja.me/assets/icons/reddit_logo.svg"
+      },
+      "alt": "Reddit von Ina Silja – Fotos, kreative Kunst, updates",
+      "class": "social-icon"
+    },
+    {
+      "url": "https://facebook.com/inasilja",
+      "label": "Facebook @inasilja",
+      "icon": {
+        "relative": "/assets/icons/facebook_logo.svg",
+        "fallback": "https://www.inasilja.me/assets/icons/facebook_logo.svg"
+      },
+      "alt": "Facebook von Ina Silja – Kreative Videos, Updates aus Ina's Leben und Interaktionen",
+      "class": "social-icon"
+    },
+    {
+      "url": "https://de.pinterest.com/BunnYcillaXD4q/",
+      "label": "Pinterest @BunnYcillaXD4q",
+      "icon": {
+        "relative": "/assets/icons/pinterest_logo.svg",
+        "fallback": "https://www.inasilja.me/assets/icons/pinterest_logo.svg"
+      },
+      "alt": "Pinterest von Ina Silja – Fotos, Videos, Kunst & Interaktionen",
+      "class": "social-icon"
+    },
+    {
+      "url": "https://www.paypal.com/paypalme/InaSilja",
+      "label": "PayPal Me – Support",
+      "icon": {
+        "relative": "/assets/icons/paypal_logo.svg",
+        "fallback": "https://www.inasilja.me/assets/icons/paypal_logo.svg"
+      },
+      "alt": "PayPal Me von Ina Silja – Unterstütze die Künstlerin und Model aus Köln",
+      "class": "social-icon"
+    }
+  ],
+  "sections": [
+    { "id": "home",                    "partial": "home.html"                    },
+    { "id": "me",                      "partial": "me.html"                      },
+    { "id": "bio",                     "partial": "bio.html"                     },
+    { "id": "steckbrief",              "partial": "steckbrief.html"              },
+    { "id": "talente",                 "partial": "talente.html"                 },
+    { "id": "namen",                   "partial": "namen.html",                 "badge": "New"              },
+    { "id": "mein-body",               "partial": "mein-body.html",             "badge": "New"              },
+    { "id": "nacktheit-sexualitaet",   "partial": "nacktheit-sexualitaet.html", "badge": "New"              },
+    { "id": "support",                 "partial": "support.html"                 },
+    { "id": "links",                   "partial": "links.html"                   }
+  ],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Ina Silja Bietsch",
+    "alternateName": "InaSilja",
+    "url": "https://www.inasilja.me",
+    "birthDate": "1996-12-10",
+    "birthPlace": { "@type": "Place", "name": "Köln, Deutschland" },
+    "nationality": "Deutsch",
+    "jobTitle": "Cross-Media-Designerin, Gamerin, Künstlerin, Autorin, Model",
+    "knowsLanguage": ["Deutsch", "Englisch"],
+    "gender": "Female",
+    "height": { "@type": "QuantitativeValue", "value": "168", "unitCode": "CMT" },
+    "weight": { "@type": "QuantitativeValue", "value": "54", "unitCode": "KGM" },
+    "hairColor": "blond (Level 7–10 mit natürlichen Highlights, wellig-straight, schulterlang, germanisch-sächsisch)",
+    "eyeColor": "blue with golden sunburst effect (central heterochromia: outer blue-gray like a gentle sky, inner golden/amber rings exploding like a sunburst, greenish or golden-yellow depending on light; blueish green eyes featuring golden sunbursts)",
+    "additionalProperty": [
+      { "@type": "PropertyValue", "name": "skinTone", "value": "very fair white skin (porcelain-like, Fitzpatrick I-II with pink undertones)" },
+      { "@type": "PropertyValue", "name": "bodyType", "value": "slim athletic with long legs (86-88 cm), hourglass shape, anime body" },
+      { "@type": "PropertyValue", "name": "bustSize", "value": "natural C-Cup (EU 75C)" },
+      { "@type": "PropertyValue", "name": "familyOrigin", "value": "European mix: West Germanic from Cologne and Saxony (mother's side, blond hair), East Prussian with subtle Slavic/Baltic/Finnish influences (paternal grandparents, high cheekbones, slim proportions, Finnish features reflected in second name Silja)" }
+    ],
+    "knowsAbout": [
+      "Digitale Kunst", "3D-Modellierung", "Musikproduktion", "Gaming",
+      "Kochen und Backen", "Handarbeiten (Häkeln, Sticken, Origami)",
+      "Bücher schreiben", "Moderne Hexerei"
+    ],
+    "hasPet": { "@type": "Animal", "name": "Schwarze Katze" },
+    "award": "Entwicklerin von Apps und Rezeptbüchern (in Kollaboration mit Lebensgefährten)",
+    "address": { "@type": "PostalAddress", "addressLocality": "Köln", "addressCountry": "DE" }
+  },
+  "imageOptimizations": {
+    "cloudinaryBase": "https://res.cloudinary.com/dekqpnsvv/image/upload/",
+    "params": "f_auto,q_auto,w_auto,dpr_auto",
+    "loading": "lazy",
+    "sizes": "(max-width: 600px) 100vw, 50vw"
+  }
+}

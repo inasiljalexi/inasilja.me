@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Central Heterochromia Eye Animation</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%; /* Geändert: Full Height des IFrames nutzen für besseres Zentrieren */
+            background-color: transparent; /* Oder rgba(0,0,0,0.3) für leichten translucent-Effekt */
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .eye {
+            position: relative;
+            width: 250px;
+            height: 250px; /* Geändert: Quadratisch! Von 120px auf 250px für perfekten Fit */
+            background: transparent; /* Augenweiß und Rand entfernt! */
+            overflow: hidden;
+            display: flex; /* Neu: Für inneres Zentrieren */
+            justify-content: center;
+            align-items: center; /* Neu: Auge vertikal/horizontal mittig */
+        }
+
+        /* Stärkerer, schneller verblassender weißer Ring für Augenweiß-Andeutung */
+        .sclera-ring {
+            position: absolute;
+            top: -20px; /* Etwas erweitert für Rand-Effekt */
+            left: -20px;
+            width: 290px;
+            height: 290px; /* Geändert: Quadratisch für besseren Fit */
+            background: radial-gradient(
+                circle at 50% 50%,
+                rgba(255, 255, 255, 1.0) 0%, /* Stärkeres inneres Weiß! */
+                rgba(255, 255, 255, 0.6) 30%, /* Dünner verblassender Ring */
+                transparent 50% /* Schneller verblasst nach außen! */
+            );
+            border-radius: 50%; /* Geändert: Vollkreis statt oval – für quadratischen Fit */
+            pointer-events: none;
+            z-index: -1; /* Im Hintergrund */
+            opacity: 0.8; /* Etwas stärker für mehr Präsenz */
+        }
+
+        .iris {
+            position: absolute;
+            top: 75px; /* Geändert: Von 20px – schiebt's runter für Center in 250px Height */
+            left: 75px;
+            width: 100px;
+            height: 100px;
+            /* Central heterochromia gradient: gold inner → bright blue outer */
+            background: radial-gradient(
+                circle at 50% 50%,
+                #e6c200 0%,    /* bright gold center */
+                #ffd700 20%,   /* golden ring */
+                #00ccff 55%,   /* transition to cyan-blue */
+                #00aaff 80%,   /* bright blue */
+                #0099e6 100%   /* deep bright blue edge */
+            );
+            border-radius: 50%;
+            animation: pulse 2s infinite alternate, rotate 12s infinite linear;
+            box-shadow: 
+                0 0 35px #40c0ff, /* Geändert: Boosted für mehr cosmic Glow */
+                inset 0 0 25px #0066aa,
+                inset 0 12px 18px rgba(255, 215, 0, 0.4); /* subtle inner gold glow */
+        }
+
+        .pupil {
+            position: absolute;
+            top: 25px;
+            left: 25px;
+            width: 50px;
+            height: 50px;
+            background: #0b0b1f;
+            border-radius: 50%;
+        }
+
+        .highlight {
+            position: absolute;
+            top: 10px;
+            left: 60px;
+            width: 15px;
+            height: 15px;
+            background: #fff;
+            border-radius: 50%;
+            opacity: 0.75;
+            animation: sparkle 1.8s infinite alternate;
+        }
+
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: #fff;
+            border-radius: 50%;
+            opacity: 0.6;
+            animation: float 3s infinite ease-in-out;
+        }
+
+        .particle:nth-child(1) { top: 40%; left: 30%; animation-delay: 0.2s; }
+        .particle:nth-child(2) { top: 55%; left: 45%; animation-delay: 0.8s; }
+        .particle:nth-child(3) { top: 35%; left: 60%; animation-delay: 1.4s; }
+        .particle:nth-child(4) { top: 65%; left: 35%; animation-delay: 2s; }
+        .particle:nth-child(5) { top: 50%; left: 70%; animation-delay: 2.6s; }
+
+        .light-rays {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 250px; /* Geändert: Passend zum neuen Eye-Size */
+            height: 250px;
+            background: radial-gradient(circle, rgba(0, 200, 255, 0.35) 0%, transparent 65%);
+            transform: translate(-50%, -50%);
+            animation: rays 3.5s infinite alternate;
+            mix-blend-mode: screen;
+            pointer-events: none;
+        }
+
+        @keyframes pulse {
+            0%   { transform: scale(1); }
+            100% { transform: scale(1.04); }
+        }
+
+        @keyframes rotate {
+            0%   { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes sparkle {
+            0%   { opacity: 0.8; transform: scale(1) translate(0,0); }
+            100% { opacity: 1;   transform: scale(1.25) translate(2px,-2px); }
+        }
+
+        @keyframes float {
+            0%   { transform: translateY(0) scale(1);   opacity: 0.6; }
+            50%  { transform: translateY(-22px) scale(1.3); opacity: 0.95; }
+            100% { transform: translateY(0) scale(1);   opacity: 0.6; }
+        }
+
+        @keyframes rays {
+            0%   { opacity: 0.45; transform: translate(-50%, -50%) scale(1); }
+            100% { opacity: 0.95; transform: translate(-50%, -50%) scale(1.12); }
+        }
+    </style>
+</head>
+<body>
+    <div class="eye">
+        <div class="sclera-ring"></div> <!-- Stärkerer, schneller verblassender Ring! -->
+        <div class="iris">
+            <div class="pupil"></div>
+            <div class="highlight"></div>
+        </div>
+        <div class="particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+        <div class="light-rays"></div>
+    </div>
+</body>
+</html>

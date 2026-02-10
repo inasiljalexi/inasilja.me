@@ -1,0 +1,102 @@
+
+/* css/reset.css – einfacher, moderner Browser-Reset */
+/* InaSilja 2026 – sauberes Fundament für Glitzer & Magie */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* Verbesserte Scroll-Smoothness & Text-Rendering */
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    /* Grund-Reset für Body */
+    min-height: 100vh;
+    line-height: 1.5;
+}
+
+/* Entfernt unerwünschte Margins & Paddings */
+h1, h2, h3, h4, h5, h6,
+p, blockquote, dl, dd,
+ol, ul, li,
+figure, figcaption,
+hr, pre, table {
+    margin: 0;
+}
+
+/* Listen ohne Bullet-Points (falls nicht gewünscht) */
+ul, ol {
+    list-style: none;
+}
+
+/* Bilder & Medien */
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Form-Elemente normalisieren */
+input, button, textarea, select {
+    font: inherit;
+    color: inherit;
+}
+
+/* Entfernt Outline bei Focus (kann später bei Bedarf stylen) */
+a,
+button,
+input,
+select,
+textarea {
+    outline: none;
+}
+
+/* Tables */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Strong & Emphases */
+strong, b {
+    font-weight: bold;
+}
+
+em, i {
+    font-style: italic;
+}
+
+/* Abstand für hr */
+hr {
+    border: none;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.2);
+    margin: 1.5rem 0;
+}
+
+/* Visuell versteckte Elemente (z. B. für Screenreader) */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}

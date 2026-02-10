@@ -1,0 +1,151 @@
+<!-- partials/home.html -->
+
+<!-- Wird in <section id="home"> geladen – nach dem dynamischen Aufbau durch config-loader.js -->
+
+<!-- Neue Swipe-Hint-Animation: Magische, glitzernde Pfeile nebeneinander mit kleinem "Swipe"-Text, der sich nach unten bewegt -->
+<div class="scroll-hint">
+    <span class="hint-text">Swipe</span>
+    <div class="arrows-container">
+        <span class="arrow">▼</span>
+        <span class="arrow delayed">▼</span>
+        <span class="arrow more-delayed">▼</span>
+    </div>
+</div>
+
+<!-- Neue Swipe-Ring-Animation: Ein magischer Ring, der den Touch-Swipe andeutet – synchron mit dem Section-Bounce. Er bewegt sich nach oben und wird kurz größer, als ob das Display berührt wird. -->
+<div class="swipe-ring"></div>
+
+<style>
+    
+:root {
+    /* Swipe Hint Animation */
+    --swipe-hint-color: var(--text-color); /* Change this to update color for text, arrows, and ring border */
+    --swipe-hint-glow: var(--text-glow);   /* Change this to update glow for text shadow and ring box-shadow */
+    --swipe-anim-duration: 12s;            /* Controls the duration of the main infinite animations */
+    --swipe-anim-delay: 5s;                /* Controls the delay before the infinite animations start */
+    --swipe-anim-distance: 30px;           /* Base distance for translates (scaled for different parts) */
+}
+
+/* Swipe Hint Animation */
+.scroll-hint {
+    position: absolute;
+    bottom: 17%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;    /* Slightly larger gap for scale */
+    color: var(--swipe-hint-color); /* Uses custom var */
+    text-shadow: var(--swipe-hint-glow); /* Uses custom var */
+    opacity: 0;  /* Start hidden */
+    animation:
+        fadeIn 2s ease-in-out, /* Sanftes Erscheinen (fixed duration) */
+        swipeHintOpacity var(--swipe-anim-duration) ease-in-out infinite;  /* Variable duration */
+    animation-delay: var(--swipe-anim-delay);  /* Variable delay (applies to both) */
+}
+
+@keyframes swipeHintOpacity {
+    0%, 80%, 100% {
+        opacity: 0;  /* Hidden most of the time */
+    }
+    85% {
+        opacity: 1;  /* Fade in */
+    }
+    90% {
+        opacity: 1;  /* Peak */
+    }
+    95% {
+        opacity: 0.5;  /* Fade out start */
+    }
+}
+
+.hint-text {
+    font-size: 1.5em; /* Scaled up from 1em */
+    font-weight: bold;
+    animation: bounceDown 1.5s infinite ease-in-out, glowPulseText 2s infinite ease-in-out;
+}
+
+.arrows-container {
+    display: flex;
+    flex-direction: row; /* Pfeile nebeneinander */
+    gap: 8px;         /* Larger gap */
+    font-size: 1.5em; /* Scaled up from 1.0em */
+}
+
+.arrow {
+    display: inline-block;
+    animation: bounceDown 1.5s infinite ease-in-out, glowPulseText 2s infinite ease-in-out;
+}
+
+.arrow.delayed {
+    animation-delay: 0.2s;
+}
+
+.arrow.more-delayed {
+    animation-delay: 0.4s;
+}
+
+@keyframes glowPulseText {
+    0%, 100% { text-shadow: 0 0 10px var(--swipe-hint-glow); }  /* Use custom var */
+    50%      { text-shadow: 0 0 30px var(--swipe-hint-glow), 0 0 60px var(--swipe-hint-glow); }  /* Adjust as needed */
+}
+
+@keyframes bounceDown {
+    0%, 100% { transform: translateY(0); opacity: 0.7; }
+    50% { transform: translateY(calc(var(--swipe-anim-distance) * 0.5)); opacity: 1; }  /* Scaled distance (e.g., 15px if base 30px) */
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+#home {
+    animation: sectionBounce var(--swipe-anim-duration) ease-in-out infinite; /* Variable duration */
+    animation-delay: var(--swipe-anim-delay); /* Variable delay */
+    animation-iteration-count: infinite;
+}
+
+@keyframes sectionBounce {
+    0%, 80%, 100% { transform: translateY(0); } /* Meiste Zeit still */
+    90% { transform: translateY(calc(var(--swipe-anim-distance) * -1)); } /* Variable distance (e.g., -30px) */
+}
+
+.swipe-ring {
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;      /* Scaled up from 40px */
+    height: 60px;     /* Scaled up from 40px */
+    border-radius: 50%;
+    border: 4px solid var(--swipe-hint-color);  /* Uses custom var (thicker border for visibility) */
+    box-shadow: var(--swipe-hint-glow); /* Uses custom var */
+    background: transparent;
+    opacity: 0; /* Startet unsichtbar */
+    animation: swipeRingAnim var(--swipe-anim-duration) ease-in-out infinite; /* Variable duration */
+    animation-delay: var(--swipe-anim-delay); /* Variable delay */
+    pointer-events: none; /* Keine Interaktion */
+    z-index: 20;
+}
+
+@keyframes swipeRingAnim {
+    0%, 80%, 100% {
+        opacity: 0;
+        transform: translate(-50%, 0) scale(1);
+    }
+    85% {
+        opacity: 1;
+        transform: translate(-50%, calc(var(--swipe-anim-distance) * -1)) scale(1.8);  /* Variable distance */
+    }
+    90% {
+        opacity: 1;
+        transform: translate(-50%, calc(var(--swipe-anim-distance) * -2)) scale(2.25); /* Variable distance (x2) */
+    }
+    95% {
+        opacity: 0.5;
+        transform: translate(-50%, calc(var(--swipe-anim-distance) * -3)) scale(1.8);  /* Variable distance (x3) */
+    }
+}
+</style>

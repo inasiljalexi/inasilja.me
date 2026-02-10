@@ -1,0 +1,57 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Titel, description, keywords, og:, twitter: etc. werden komplett dynamisch via JS gesetzt -->
+
+    <!-- Fallback Favicon – wird dynamisch überschrieben -->
+    <link rel="icon" href="/assets/images/favicon_inasilja.png" type="image/png">
+
+    <!-- Reset -->
+    <link rel="stylesheet" href="/css/reset.css">
+
+    <!-- Fonts zuerst laden -->
+    <link rel="stylesheet" href="/css/fonts.css">
+
+    <!-- Haupt-Styles -->
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body tabIndex="0">
+    <!-- Starfield Hintergrund -->
+    <canvas id="starfield"></canvas>
+
+    <!-- Sections – Inhalt wird dynamisch via config-loader.js aus partials/ geladen -->
+    <section id="home"></section>
+    <section id="me"></section>
+    <section id="bio"></section>
+    <section id="steckbrief"></section>
+    <section id="talente"></section>
+    <section id="namen"></section>
+    <section id="mein-body"></section>
+    <section id="nacktheit-sexualitaet"></section>
+    <section id="support"></section>
+    <section id="links"></section>
+
+    <!-- Navigation Dots (active-Klasse wird via scripts.js gesetzt) -->
+    <div class="navigation">
+        <div class="nav-dot" data-section="home"></div>
+        <div class="nav-dot" data-section="me"></div>
+        <div class="nav-dot" data-section="bio"></div>
+        <div class="nav-dot" data-section="steckbrief"></div>
+        <div class="nav-dot" data-section="talente"></div>
+        <div class="nav-dot" data-section="namen"></div>
+        <div class="nav-dot" data-section="mein-body"></div>
+        <div class="nav-dot" data-section="nacktheit-sexualitaet"></div>
+        <div class="nav-dot" data-section="support"></div>
+        <div class="nav-dot" data-section="links"></div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="/js/config-loader.js"></script>
+    <script src="/js/scripts.js"></script>
+</body>
+</html>
