@@ -9,7 +9,7 @@
   "openGraph": {
     "title": "☆ 𝓘𝓷𝓪𝓢𝓲𝓵𝓳𝓪 ☆ – Dein funkelndes Sternchen",
     "description": "Blondes Anime-Engelchen aus Köln: Kreativ in Design, Gaming, Kunst und mehr. Folge mir für Glitzer, Magie und exklusiven Content!",
-    "image": "https://res.cloudinary.com/dekqpnsvv/image/upload/f_auto,q_auto,w_auto,dpr_auto/v1770596168/profile_inasilja.heic",
+    "image": "https://res.cloudinary.com/dx5lrpzzn/image/upload/f_auto,q_auto,w_auto,dpr_auto/v1770596168/profile_inasilja.heic",
     "url": "https://www.inasilja.me",
     "type": "website"
   },
@@ -18,7 +18,7 @@
     "site": "@Cilexiella",
     "title": "Ina Silja Bietsch @Cilexiella – Cross-Media-Designerin & Model",
     "description": "Entdecke meine verzauberte Welt: Design, Gaming, Kunst, Live Updates, Cyberspacing und sehr vieles mehr aus Köln!",
-    "image": "https://res.cloudinary.com/dekqpnsvv/image/upload/f_auto,q_auto,w_auto,dpr_auto/v1770596168/profile_inasilja.heic"
+    "image": "https://res.cloudinary.com/dx5lrpzzn/image/upload/f_auto,q_auto,w_auto,dpr_auto/v1770596168/profile_inasilja.heic"
   },
   "favicon": {
     "relative": "/assets/images/favicon_inasilja.png",
@@ -26,7 +26,7 @@
     "type": "image/png"
   },
   "profileImage": {
-    "relative": "https://res.cloudinary.com/dekqpnsvv/image/upload/f_auto,q_auto,w_auto,dpr_auto/v1770596168/profile_inasilja.heic",
+    "relative": "https://res.cloudinary.com/dx5lrpzzn/image/upload/f_auto,q_auto,w_auto,dpr_auto/v1770596168/profile_inasilja.heic",
     "fallback": "https://www.inasilja.me/assets/images/profile_inasilja.webp",
     "alt": "Ina Silja Bietsch – Cross-Media-Designerin, Gamerin, Künstlerin und Model aus Köln mit blonden Haaren, blauen Augen und heller Haut"
   },
@@ -254,7 +254,7 @@
     "address": { "@type": "PostalAddress", "addressLocality": "Köln", "addressCountry": "DE" }
   },
   "imageOptimizations": {
-    "cloudinaryBase": "https://res.cloudinary.com/dekqpnsvv/image/upload/",
+    "cloudinaryBase": "https://res.cloudinary.com/dx5lrpzzn/image/upload/",
     "params": "f_auto,q_auto,w_auto,dpr_auto",
     "loading": "lazy",
     "sizes": "(max-width: 600px) 100vw, 50vw"
