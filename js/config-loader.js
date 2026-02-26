@@ -226,42 +226,43 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 });
 
-// Neue Funktion: Optimiert alle Cloudinary-Bilder zentral (verbesserte Erkennung)
+const CLD_PLACEHOLDER = '__CLD__';   // ← nur zur Erkennung, wird aus URL entfernt
+
+// Neue Funktion: Optimiert alle Cloudinary-Bilder zentral (Placeholder-basiert)
 function optimizeImages(config) {
-    if (!config?.imageOptimizations) {
-        console.warn('imageOptimizations fehlt in config!');
-        return;
+  if (!config?.imageOptimizations) {
+    console.warn('imageOptimizations fehlt in config!');
+    return;
+  }
+
+  console.log('🚀 optimizeImages wurde aufgerufen!');
+
+  const images = document.querySelectorAll('img');
+  console.log(`Gefundene Bilder im DOM: ${images.length}`);
+
+  images.forEach((img, index) => {
+    const originalSrc = img.getAttribute('src'); // WICHTIG: Original aus HTML!
+    if (!originalSrc) return;
+
+    console.log(`Bild ${index + 1} → Original src:`, originalSrc);
+
+    // Nur Bilder mit unserem Placeholder bearbeiten
+    if (originalSrc.includes(CLD_PLACEHOLDER)) {
+      
+      // Placeholder entfernen + Pfad sauber machen
+      let publicId = originalSrc
+        .replace(CLD_PLACEHOLDER, '')
+        .replace(/^\/+/, '');   // führende Slashes entfernen
+
+      const newSrc = `${config.imageOptimizations.cloudinaryBase}${config.imageOptimizations.params}/${publicId}`;
+
+      img.src = newSrc;
+      img.loading = config.imageOptimizations.loading || 'lazy';
+      img.sizes = config.imageOptimizations.sizes || '(max-width: 600px) 100vw, 50vw';
+
+      console.log(`✅ Bild erfolgreich optimiert → ${newSrc}`);
+    } else {
+      console.log(`⏭️ Bild wird übersprungen (kein ${CLD_PLACEHOLDER} Placeholder)`);
     }
-
-    console.log('🚀 optimizeImages wurde aufgerufen!');
-    const images = document.querySelectorAll('img');
-
-    console.log(`Gefundene Bilder im DOM: ${images.length}`);
-
-    images.forEach((img, index) => {
-        const originalSrc = img.getAttribute('src');   // WICHTIG: Original aus HTML!
-
-        if (!originalSrc) return;
-
-        console.log(`Bild ${index + 1} → Original src:`, originalSrc);
-
-        // Erkenne Cloudinary-Rest-URLs (beginnt mit v + viele Zahlen + /) oder volle Cloudinary-URLs
-        if (originalSrc.match(/^v\d{8,12}\//) || originalSrc.includes('cloudinary.com')) {
-            let versionAndFile = originalSrc;
-
-            if (originalSrc.includes('/upload/')) {
-                versionAndFile = originalSrc.split('/upload/')[1];
-            }
-
-            const newSrc = `${config.imageOptimizations.cloudinaryBase}${config.imageOptimizations.params}/${versionAndFile}`;
-
-            img.src = newSrc;
-            img.loading = config.imageOptimizations.loading || 'lazy';
-            img.sizes = config.imageOptimizations.sizes || '(max-width: 600px) 100vw, 50vw';
-
-            console.log(`✅ Bild erfolgreich optimiert → ${newSrc}`);
-        } else {
-            console.log(`⏭️  Bild wird übersprungen (kein Cloudinary-Rest-Pfad)`);
-        }
-    });
+  });
 }
