@@ -68,7 +68,7 @@
       "class": "snapchat-icon primary-socials-icon"
     },
     {
-      "url": "https://t.me/inasiljastella",
+      "url": "https://t.me/inasiljasternchen",
       "icon": {
         "relative": "/assets/icons/telegram_logo.svg",
         "fallback": "https://www.inasilja.me/assets/icons/telegram_logo.svg"
@@ -120,8 +120,8 @@
       "badge": "New"
     },
     {
-      "url": "https://t.me/inasiljastella",
-      "label": "Telegram @inasiljastella",
+      "url": "https://t.me/inasiljasternchen",
+      "label": "Telegram @inasiljasternchen",
       "icon": {
         "relative": "/assets/icons/telegram_logo.svg",
         "fallback": "https://www.inasilja.me/assets/icons/telegram_logo.svg"
