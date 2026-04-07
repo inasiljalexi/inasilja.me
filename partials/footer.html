@@ -1,0 +1,122 @@
+<!-- partials/footer.html -->
+<h2>Alle Links – Folge mir überall!</h2>
+
+<p>Hier findest du alle meine Kanäle auf einen Blick – von OnlyFans über X bis hin zu PayPal.  
+Klick dich durch und lass uns zusammen glitzern!</p>
+
+<!-- Dynamischer Container: config-loader.js fügt hier die .socials-Buttons ein -->
+<div class="socials" id="all-links-container">
+    <!-- JS injectet hier die Link-Buttons aus config.linkButtons -->
+    <!-- Fallback-Text, falls JS noch nicht geladen hat -->
+    <p style="opacity: 0.6; font-style: italic;">Links werden gerade geladen...</p>
+</div>
+
+<div class="footer-container">
+  <div class="footer-content">
+    <div class="magic-divider">✧ ★ ✧ ★ ✧ ★ ✧ ★ ✧ ★ ✧</div>
+    
+    <p class="copyright">
+      © 2026 Ina Silja Bietsch ❦<br>
+      <span>Made with lots of love, glitter &amp; magic</span>
+    </p>
+
+    <nav class="footer-nav">
+      <a href="#home">Home</a>
+      <a href="#me">Me</a>
+      <a href="#bio">Bio</a>
+      <a href="#support">Support</a>
+      <a href="/impressum" class="impressum-link">Impressum</a>
+    </nav>
+
+    <p class="footer-note">Alle Rechte vorbehalten • Dein funkelndes Sternchen</p>
+  </div>
+</div>
+
+<style>
+  /* WICHTIG: überschreibt die Section-Regel komplett */
+  #footer {
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .footer-container {
+    width: 100vw !important;
+    margin-left: calc(50% - 50vw) !important;
+    max-width: none !important;
+    background: rgba(10, 10, 20, 0.45);
+    backdrop-filter: blur(12px);
+    border-top: 2px solid var(--primary-color);
+    padding: 5rem 5vw 4rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .footer-content {
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+
+  .magic-divider {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 2rem;
+    text-shadow: var(--secondary-glow);
+    animation: rainbowGlow 4s linear infinite;
+    letter-spacing: 8px;
+  }
+
+  .copyright {
+    font-size: 1.45rem;
+    color: var(--text-color);
+    text-shadow: var(--primary-glow);
+    margin-bottom: 2.5rem;
+    line-height: 1.4;
+  }
+
+  .copyright span {
+    color: var(--highlight-color);
+    text-shadow: var(--highlight-glow);
+  }
+
+  .footer-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    margin-bottom: 2.5rem;
+    font-size: 1.2rem;
+  }
+
+  .footer-nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.4s ease;
+    text-shadow: var(--text-glow);
+  }
+
+  .footer-nav a:hover {
+    color: var(--accent-color);
+    transform: scale(1.15) rotate(8deg);
+    text-shadow: var(--primary-glow);
+  }
+
+  .impressum-link {
+    color: var(--secondary-color) !important;
+    text-shadow: var(--secondary-glow) !important;
+  }
+
+  .footer-note {
+    font-size: 1rem;
+    opacity: 0.8;
+    color: var(--tertiary-color);
+    text-shadow: var(--tertiary-glow);
+  }
+
+  @keyframes rainbowGlow {
+    0% { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(360deg); }
+  }
+</style>

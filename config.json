@@ -220,7 +220,7 @@
     { "id": "mein-body",               "partial": "mein-body.html",             "badge": "New"              },
     { "id": "nacktheit-sexualitaet",   "partial": "nacktheit-sexualitaet.html", "badge": "New"              },
     { "id": "support",                 "partial": "support.html"                 },
-    { "id": "links",                   "partial": "links.html"                   }
+    { "id": "footer",                  "partial": "footer.html"                  }
   ],
   "schema": {
     "@context": "https://schema.org",

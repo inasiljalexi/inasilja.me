@@ -22,6 +22,7 @@ Hier ist die vollständige Projektstruktur (basierend auf den aktuellen Dateien 
 inasilja.me/
 ├── index.html                        // Haupt-Einstieg: Skelett mit Sections & Canvas
 ├── config.json                       // Zentrale Config: Meta, Links, Socials, Schema.org
+├── impressum.html                    // Separate Impressum-Seite (direkt unter /impressum erreichbar)
 ├── README.md                         // Diese Doku! 😊
 ├── assets/                           // Animations, Fonts, Icons, Images
 │   └── animations/                   // Neu! Für animierte HTML/CSS-Dinger
@@ -57,7 +58,7 @@ inasilja.me/
     ├── mein-body.html                // Mein Body – Sections mit Beschreibungen & Bildern
     ├── nacktheit-sexualitaet.html    // Aufklärung über Nacktheit & Sexualität
     ├── support.html                  // Support-Me-Section
-    └── links.html                    // Alle Links (dynamisch geladen)
+    └── footer.html                   // Footer mit Social-Links + Copyright
 ```
 
 **Hinweis zur Struktur:**  

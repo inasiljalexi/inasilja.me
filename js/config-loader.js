@@ -114,6 +114,13 @@ document.addEventListener('DOMContentLoaded', async () => {
                 }
                 homeHTML += '</div>';
             }
+            
+            // TODO impresums link bitte!! 
+            homeHTML += `
+                <a href="/impressum" style="position: relative; z-index: 10;">
+                    § Impressum
+                </a>
+            `;
 
             // Zusätzlicher Willkommenstext
             if (config.bio.split('\n')[1]) {
@@ -167,25 +174,31 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
 
         // ────────────────────────────────────────────────
-        // 7. Alle Links in #links Section einfügen
+        // 7. Social Links in #all-links-container injizieren (funktioniert jetzt im Footer!)
         // ────────────────────────────────────────────────
-        const linksContainer = document.getElementById('all-links-container');
-        if (linksContainer && config.linkButtons && config.linkButtons.length > 0) {
-            let linksHTML = '';
-            config.linkButtons.forEach(button => {
-                const iconSrc = button.icon.relative || button.icon.fallback;
-                linksHTML += `
-                    <a href="${button.url}" class="social-link ${button.extraClass || ''}" target="_blank" rel="noopener noreferrer">
-                        <img src="${iconSrc}" alt="${button.alt}" class="${button.class || 'social-icon'}">
-                        <span>${button.label}</span>
-                        ${button.badge ? `<span class="new-badge">${button.badge}</span>` : ''}
-                    </a>
-                `;
-            });
-            linksContainer.innerHTML = linksHTML;
-        } else if (linksContainer) {
-            linksContainer.innerHTML = '<p>Keine Links verfügbar... 🌙</p>';
+        function injectSocialLinks() {
+            const linksContainer = document.getElementById('all-links-container');
+            if (linksContainer && config.linkButtons && config.linkButtons.length > 0) {
+                let linksHTML = '';
+                config.linkButtons.forEach(button => {
+                    const iconSrc = button.icon.relative || button.icon.fallback;
+                    linksHTML += `
+                        <a href="${button.url}" class="social-link ${button.extraClass || ''}" target="_blank" rel="noopener noreferrer">
+                            <img src="${iconSrc}" alt="${button.alt}" class="${button.class || 'social-icon'}">
+                            <span>${button.label}</span>
+                            ${button.badge ? `<span class="new-badge">${button.badge}</span>` : ''}
+                        </a>
+                    `;
+                });
+                linksContainer.innerHTML = linksHTML;
+                console.log('✅ Social Links im Footer geladen');
+            } else if (linksContainer) {
+                linksContainer.innerHTML = '<p style="opacity: 0.6; font-style: italic;">Keine Links gefunden...</p>';
+            }
         }
+
+        // Sofort nach dem Laden aller Sections ausführen
+        injectSocialLinks();
 
         // ────────────────────────────────────────────────
         // 8. Schema.org JSON-LD dynamisch erstellen
@@ -213,6 +226,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         // Neu: Nach dem Laden aller Partials Bilder optimieren (zentral)
         optimizeImages(config);
+
+        // Extra Sicherheit für den Footer (falls Partial noch lädt)
+        setTimeout(injectSocialLinks, 500);
 
         console.log('Seite dynamisch aufgebaut ✓');
 
