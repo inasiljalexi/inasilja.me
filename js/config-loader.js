@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     class="profile-img">
 
                 <!-- Zierschrift bleibt sichtbar; Screenreader & Suchmaschinen lesen den Klartext (nameText) -->
-                <h1><span aria-hidden="true">${config.name}</span><span class="visually-hidden">${config.nameText || 'Ina Silja'}</span></h1>
+                <h1><span class="name-fancy" aria-hidden="true">${config.name}</span><span class="visually-hidden">${config.nameText || 'Ina Silja'}</span></h1>
 
                 <p class="bio-highlight">${config.bio.split('\n')[0]}</p>
             `;

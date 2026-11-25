@@ -730,3 +730,10 @@ img[data-optimized="false"] {
     white-space: nowrap !important;
     border: 0 !important;
 }
+
+/* Zierschrift-Name im Home-h1: eigene Subset-Schrift, damit 𝓘𝓷𝓪𝓢𝓲𝓵𝓳𝓪 überall angezeigt wird (keine Kästchen) */
+.name-fancy {
+    font-family: 'Noto Sans Math Subset', var(--main-font);
+    font-weight: 400;          /* Glyphen sind schon "Bold Script" – kein künstliches Fettmachen */
+    font-synthesis: none;
+}
