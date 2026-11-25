@@ -140,13 +140,13 @@
       "class": "social-icon"
     },
     {
-      "url": "https://www.youtube.com/@inasiljastella",
-      "label": "YouTube @inasiljastella",
+      "url": "https://www.youtube.com/@Cilexiella",
+      "label": "YouTube @Cilexiella",
       "icon": {
         "relative": "/assets/icons/youtube_logo.svg",
         "fallback": "https://www.inasilja.me/assets/icons/youtube_logo.svg"
       },
-      "alt": "YouTube Kanal von Ina Silja Stella – Videos zu Design, Gaming und Musik",
+      "alt": "YouTube Kanal von Ina Silja Stella – Videos zu Life, Style, Design, Gaming und Musik",
       "class": "social-icon"
     },
     {
