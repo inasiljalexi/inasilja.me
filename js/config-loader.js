@@ -116,11 +116,11 @@ document.addEventListener('DOMContentLoaded', async () => {
                 homeHTML += '</div>';
             }
             
-            // TODO impresums link bitte!! 
+            // Rechtliche Links auf der Startseite (Impressum & Datenschutz)
             homeHTML += `
-                <a href="/impressum" style="position: relative; z-index: 10;">
-                    § Impressum
-                </a>
+                <p class="legal-links" style="position: relative; z-index: 10;">
+                    <a href="/impressum">§ Impressum</a> • <a href="/datenschutz">Datenschutz</a>
+                </p>
             `;
 
             // Zusätzlicher Willkommenstext

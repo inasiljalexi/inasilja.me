@@ -27,7 +27,7 @@ inasilja.me/
 ├── README.md                         // Diese Doku! 😊
 ├── assets/                           // Animations, Fonts, Icons, Images
 │   └── animations/                   // Neu! Für animierte HTML/CSS-Dinger
-│       └── eye_animation.html        // Deine coole Auge-Animation
+│       └── eye-animation_goldenblue.html  // Deine coole Auge-Animation
 │   └── fonts/                        // Fonts
 │       // comic-neue-v9-latin-*.woff2 (Fonts von https://gwfh.mranftl.com/fonts/comic-neue?subsets=latin)
 │       ├── comic-neue-v9-latin-300.woff2
@@ -35,7 +35,8 @@ inasilja.me/
 │       ├── comic-neue-v9-latin-regular.woff2
 │       ├── comic-neue-v9-latin-italic.woff2
 │       ├── comic-neue-v9-latin-700.woff2
-│       └── comic-neue-v9-latin-700italic.woff2
+│       ├── comic-neue-v9-latin-700italic.woff2
+│       └── noto-sans-math/           // Subset nur für den Zierschrift-Namen ☆ 𝓘𝓷𝓪𝓢𝓲𝓵𝓳𝓪 ☆ (+ OFL.txt Lizenz)
 │   ├── icons/                        // onlyfans_logo.svg, x_logo.svg usw.
 │   │   ├── onlyfans_logo.svg         // Beispiel-Icon für OnlyFans-Link
 │   │   └── x_logo.svg                // Beispiel-Icon für X (Twitter)-Link
@@ -66,10 +67,9 @@ inasilja.me/
 - Alle Partial-Dateien in `/partials/` werden dynamisch via `config-loader.js` in die entsprechenden `<section>`-Elemente in `index.html` geladen.  
 - Assets sind kategorisiert: Fonts stammen von [https://gwfh.mranftl.com/fonts/comic-neue?subsets=latin](https://gwfh.mranftl.com/fonts/comic-neue?subsets=latin) (Google Webfonts Helper, für optimierte .woff2-Dateien).  
 - Alle Bilder liegen seit v007 lokal in `/assets/images/` als WebP (kein Cloudinary mehr nötig). Der `__CLD__`-Platzhalter in `config-loader.js` funktioniert weiterhin, falls du ein Bild doch mal über Cloudinary laden willst.  
-- Es gibt eine separate `ina_silja_page.html`-Datei (nicht im Haupt-Repo-Struktur, könnte ein Export oder Test-Seite sein – falls relevant, integriere sie in die Struktur).
 
 ## Setup & Start
-1. **Repo klonen**: `git clone https://github.com/dein-repo/inasilja.me.git`
+1. **Repo klonen**: `git clone https://github.com/inasiljalexi/inasilja.me.git`
 2. **Abhängigkeiten**: Keine! Alles vanilla – kein NPM/Yarn nötig.
 3. **Lokal öffnen**: Öffne `index.html` einfach im Browser (kein Server nötig, aber für Fetch empfehle ich ein Tool wie Live Server in VS Code)
 4. **Testen**: 
