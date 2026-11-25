@@ -23,6 +23,7 @@ inasilja.me/
 ├── index.html                        // Haupt-Einstieg: Skelett mit Sections & Canvas
 ├── config.json                       // Zentrale Config: Meta, Links, Socials, Schema.org
 ├── impressum.html                    // Separate Impressum-Seite (direkt unter /impressum erreichbar)
+├── datenschutz.html                  // Datenschutzerklärung (direkt unter /datenschutz erreichbar)
 ├── README.md                         // Diese Doku! 😊
 ├── assets/                           // Animations, Fonts, Icons, Images
 │   └── animations/                   // Neu! Für animierte HTML/CSS-Dinger
@@ -38,7 +39,7 @@ inasilja.me/
 │   ├── icons/                        // onlyfans_logo.svg, x_logo.svg usw.
 │   │   ├── onlyfans_logo.svg         // Beispiel-Icon für OnlyFans-Link
 │   │   └── x_logo.svg                // Beispiel-Icon für X (Twitter)-Link
-│   └── images/                       // profile_inasilja.webp, favicon_inasilja.png usw.
+│   └── images/                       // Alle Fotos als WebP (max. 900 px breit), dazu og_inasilja.jpg für Link-Vorschauen
 │       ├── profile_inasilja.webp     // Haupt-Profilbild (Fallback)
 │       └── favicon_inasilja.png      // Favicon (Fallback)
 ├── css/                              // Stylesheets
@@ -64,7 +65,7 @@ inasilja.me/
 **Hinweis zur Struktur:**  
 - Alle Partial-Dateien in `/partials/` werden dynamisch via `config-loader.js` in die entsprechenden `<section>`-Elemente in `index.html` geladen.  
 - Assets sind kategorisiert: Fonts stammen von [https://gwfh.mranftl.com/fonts/comic-neue?subsets=latin](https://gwfh.mranftl.com/fonts/comic-neue?subsets=latin) (Google Webfonts Helper, für optimierte .woff2-Dateien).  
-- Bilder in `/assets/images/` sind als Fallbacks gedacht; viele Inhalte laden dynamisch von Cloudinary (konfiguriert in `config.json`).  
+- Alle Bilder liegen seit v007 lokal in `/assets/images/` als WebP (kein Cloudinary mehr nötig). Der `__CLD__`-Platzhalter in `config-loader.js` funktioniert weiterhin, falls du ein Bild doch mal über Cloudinary laden willst.  
 - Es gibt eine separate `ina_silja_page.html`-Datei (nicht im Haupt-Repo-Struktur, könnte ein Export oder Test-Seite sein – falls relevant, integriere sie in die Struktur).
 
 ## Setup & Start
