@@ -731,9 +731,11 @@ img[data-optimized="false"] {
     border: 0 !important;
 }
 
-/* Zierschrift-Name im Home-h1: eigene Subset-Schrift, damit 𝓘𝓷𝓪𝓢𝓲𝓵𝓳𝓪 überall angezeigt wird (keine Kästchen) */
-.name-fancy {
-    font-family: 'Noto Sans Math Subset', var(--main-font);
-    font-weight: 400;          /* Glyphen sind schon "Bold Script" – kein künstliches Fettmachen */
-    font-synthesis: none;
+/* Zierschrift-Name ☆ 𝓘𝓷𝓪𝓢𝓲𝓵𝓳𝓪 ☆ im Home-h1 – Inas Markenzeichen:
+   1) Normalfall (iPhone, Mac, Windows, Android …): KEINE eigene Regel. Der Name erbt die h1-Schrift,
+      und das Gerät nimmt für die Zierbuchstaben seine eigene Systemschrift – genau wie vorher, inkl. Fett-Darstellung.
+   2) Nur wenn das Gerät die Zeichen NICHT hat (würde Kästchen zeigen), setzt config-loader.js die Klasse
+      "no-math-script" an <html>. Dann springt die mitgelieferte Noto-Subset-Schrift ein. Die Sterne ☆ bleiben Systemschrift. */
+html.no-math-script .name-fancy {
+    font-family: var(--main-font), 'Noto Sans Math Subset', sans-serif;
 }

@@ -36,7 +36,7 @@ inasilja.me/
 │       ├── comic-neue-v9-latin-italic.woff2
 │       ├── comic-neue-v9-latin-700.woff2
 │       ├── comic-neue-v9-latin-700italic.woff2
-│       └── noto-sans-math/           // Subset nur für den Zierschrift-Namen ☆ 𝓘𝓷𝓪𝓢𝓲𝓵𝓳𝓪 ☆ (+ OFL.txt Lizenz)
+│       └── noto-sans-math/           // Notfall-Ersatzschrift für 𝓘𝓷𝓪𝓢𝓲𝓵𝓳𝓪, nur auf Geräten ohne diese Zeichen (+ OFL.txt Lizenz)
 │   ├── icons/                        // onlyfans_logo.svg, x_logo.svg usw.
 │   │   ├── onlyfans_logo.svg         // Beispiel-Icon für OnlyFans-Link
 │   │   └── x_logo.svg                // Beispiel-Icon für X (Twitter)-Link

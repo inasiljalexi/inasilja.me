@@ -129,6 +129,14 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
 
             homeSection.innerHTML = homeHTML;
+
+            // Zierschrift-Name: nur wenn das Gerät die Zeichen nicht selbst darstellen kann,
+            // die mitgelieferte Ersatzschrift aktivieren (sonst bleibt alles wie gewohnt, z. B. auf iPhone/Mac)
+            const nameH1 = homeSection.querySelector('h1');
+            if (nameH1 && !hasMathScriptGlyphs(getComputedStyle(nameH1).font)) {
+                document.documentElement.classList.add('no-math-script');
+                console.log('Zierschrift-Zeichen fehlen auf diesem Gerät → Ersatzschrift aktiv');
+            }
         }
 
         // Hilfsfunktion: Checkt, ob Bild lädt (Promise)
@@ -282,4 +290,19 @@ function optimizeImages(config) {
       console.log(`⏭️ Bild wird übersprungen (kein ${CLD_PLACEHOLDER} Placeholder)`);
     }
   });
+}
+
+// Prüft, ob das Gerät die Zierschrift-Buchstaben (Mathematical Bold Script, z. B. 𝓘𝓷𝓪) selbst darstellen kann.
+// Trick: Echte Buchstaben haben unterschiedliche Breiten. Fehlende Zeichen werden alle als gleich breites
+// "Kästchen" gezeichnet – genau wie unbelegte Codepunkte. Sind beide Texte gleich breit, fehlen die Zeichen.
+function hasMathScriptGlyphs(fontCss) {
+  try {
+    const ctx = document.createElement('canvas').getContext('2d');
+    ctx.font = fontCss || '700 40px sans-serif';
+    const echt = ctx.measureText('\u{1D4D8}\u{1D4F7}\u{1D4EA}\u{1D4E2}\u{1D4F2}\u{1D4F5}\u{1D4F3}\u{1D4EA}').width;           // 𝓘𝓷𝓪𝓢𝓲𝓵𝓳𝓪
+    const unbelegt = ctx.measureText('\u{1D49D}\u{1D4A0}\u{1D4A1}\u{1D4A3}\u{1D4A4}\u{1D4A7}\u{1D4A8}\u{1D4AD}').width;    // 8 reservierte Lücken im Unicode-Block
+    return Math.abs(echt - unbelegt) > 0.5;
+  } catch (e) {
+    return true; // im Zweifel nichts ändern
+  }
 }
