@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         // ────────────────────────────────────────────────
         // 2. Titel & Meta-Tags setzen
         // ────────────────────────────────────────────────
-        document.title = config.title || '☆ 𝓘𝓷𝓪𝓢𝓲𝓵𝓳𝓪 ☆';
+        document.title = config.title || '☆ Ina Silja ☆';
 
         // Hilfsfunktion: Meta-Tag erstellen oder updaten
         function setMeta(nameOrProperty, content, isProperty = false) {
@@ -90,7 +90,8 @@ document.addEventListener('DOMContentLoaded', async () => {
                     alt="${config.profileImage.alt || 'Ina Silja'}" 
                     class="profile-img">
 
-                <h1>${config.name}</h1>
+                <!-- Zierschrift bleibt sichtbar; Screenreader & Suchmaschinen lesen den Klartext (nameText) -->
+                <h1><span aria-hidden="true">${config.name}</span><span class="visually-hidden">${config.nameText || 'Ina Silja'}</span></h1>
 
                 <p class="bio-highlight">${config.bio.split('\n')[0]}</p>
             `;
